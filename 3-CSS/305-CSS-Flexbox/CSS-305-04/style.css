@@ -1,1 +1,50 @@
 /* start your styling here  */
+img{
+    width: 70px;
+}
+.discount-img{
+    width: 100%;
+}
+.img-logo{
+    width: 80px;
+}
+.nav-section{
+    background-color: rgb(68, 117, 207);
+    color: white;
+}
+.ei{
+    color: white;
+}
+.pi{
+    color: darkkhaki;
+}
+.figc{
+    font-size: 13px;
+}
+input{
+    border: none;
+    outline: none;
+    width: 500px;
+    height: 40px;
+}
+.search-logo{
+    background-color: white;
+    color: rgb(68, 117, 207) ;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginbtn{
+    width: 120px;
+    height: 37px;
+    background-color: white;
+    border: none;
+}
+.plus-logo{
+    color: burlywood;
+}
+li{
+    margin-left: 10px;
+    margin-right: 10px;
+}

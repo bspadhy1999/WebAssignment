@@ -1,0 +1,13 @@
+/* start your css here */
+img{
+    width: 30vw;
+    height: 60vh;
+}
+p{
+    font-size: 19px;
+}
+span{
+    font-size: 19px;
+    opacity: 0.5;
+    font-weight: 600;
+}

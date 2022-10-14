@@ -1,1 +1,35 @@
 /* start your styling here  */
+.main-section{
+    background-color: deeppink;
+    border-bottom: 4px solid black;
+    border-radius: 10px;
+}
+.num-button-div{
+    background-color:darkslateblue ;
+    border-bottom: 3px solid black;
+    border-radius: 5px;
+}
+.sym-button-div{
+    background-color: darkkhaki;
+    border-bottom: 3px solid black;
+    border-radius: 5px;
+    color: black;
+}
+.eql-button-div{
+    background-color: chartreuse;
+    border-bottom: 3px solid black;
+    border-radius: 5px;
+    color: black;
+}
+.input-div{
+    background-color:darkslateblue ;
+    border-top: 3px solid black;
+    border-radius: 5px;
+    color: white;
+}
+.num-button{
+    font-size: 20px;
+}
+.input-num-button{
+    font-size: 25px;
+}

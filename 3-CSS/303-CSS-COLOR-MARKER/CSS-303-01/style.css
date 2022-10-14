@@ -1,0 +1,116 @@
+.main-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+}
+.all-pen{
+    background-color: rgba(233, 226, 226, 0.123);
+    margin-top: 20px;
+}
+.red-pen{
+    display: flex;
+    box-shadow: 0 0 7px black;
+}
+.red-pen-div-1{
+    width: 70px;
+    height: 30px;
+    background-color: red;
+}
+.red-pen-div-2{
+    width: 4px;
+    height: 30px;
+    background-color: black;
+}
+.red-pen-div-3{
+    width: 4px;
+    height: 30px;
+    background-color: rgba(182, 59, 59, 0.677);
+}
+.red-pen-div-4{
+    width: 4px;
+    height: 30px;
+    background-color: black;
+}
+.red-pen-div-5{
+    width: 130px;
+    height: 30px;
+    background-color: rgba(182, 59, 59, 0.677);
+}
+.red-pen-div-6{
+    width: 17px;
+    height: 30px;
+    background-color: red;
+}
+.green-pen{
+    display: flex;
+    margin-top: 10px;
+    box-shadow: 0 0 7px black;
+}
+.green-pen-div-1{
+    width: 70px;
+    height: 30px;
+    background-color: green;
+}
+.green-pen-div-2{
+    width: 4px;
+    height: 30px;
+    background-color: black;
+}
+.green-pen-div-3{
+    width: 4px;
+    height: 30px;
+    background-color: rgba(59, 182, 65, 0.677);
+}
+.green-pen-div-4{
+    width: 4px;
+    height: 30px;
+    background-color: black;
+}
+.green-pen-div-5{
+    width: 130px;
+    height: 30px;
+    background-color: rgba(59, 182, 65, 0.677);
+}
+.green-pen-div-6{
+    width: 17px;
+    height: 30px;
+    background-color: green;
+}
+.blue-pen{
+    display: flex;
+    margin-top: 10px;
+    box-shadow: 0 0 7px black;
+}
+.blue-pen-div-1{
+    width: 70px;
+    height: 30px;
+    background-color: blue;
+}
+.blue-pen-div-2{
+    width: 4px;
+    height: 30px;
+    background-color: black;
+}
+.blue-pen-div-3{
+    width: 4px;
+    height: 30px;
+    background-color: rgba(40, 59, 196, 0.697);
+}
+.blue-pen-div-4{
+    width: 4px;
+    height: 30px;
+    background-color: black;
+}
+.blue-pen-div-5{
+    width: 130px;
+    height: 30px;
+    background-color: rgba(40, 59, 196, 0.697);
+}
+.blue-pen-div-6{
+    width: 17px;
+    height: 30px;
+    background-color: blue;
+}

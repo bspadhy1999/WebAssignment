@@ -1,0 +1,46 @@
+/* start your css here */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(https://images.unsplash.com/photo-1580933073521-dc49ac0d4e6a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlJTIwYmVhbnN8ZW58MHx8MHx8&w=1000&q=80);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+.main-section {
+  background-color: burlywood;
+}
+h1 {
+  text-transform: uppercase;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: bolder;
+  text-align: center;
+}
+h2 {
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: center;
+}
+h3 {
+  text-align: center;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.hr {
+  height: 5px;
+  background-color: brown;
+}
+p {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+span {
+  opacity: 0.8;
+  text-align: center;
+}

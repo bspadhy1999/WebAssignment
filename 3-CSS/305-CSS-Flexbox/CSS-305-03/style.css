@@ -1,1 +1,48 @@
 /* start your styling here  */
+p{
+    font-family: 'Quicksand', sans-serif;
+}
+h1{
+    font-family: 'Oswald', sans-serif;
+}
+img{
+    width: 50px;
+}
+.button-left{
+    background-color: white;
+    color: goldenrod ;
+    border-radius: 25px;
+    border: 1px solid white;
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+.button-mid{
+    background-color: white;
+    color: blue ;
+    border-radius: 25px;
+    border: 1px solid white;
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+.button-right{
+    background-color: white;
+    color: cornflowerblue ;
+    border-radius: 25px;
+    border: 1px solid white;
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+.left{
+    background-color: goldenrod;
+    color: white;
+    border-radius: 10px 0px 0px 10px;
+}
+.mid{
+    background-color:  blue;
+    color: white;
+}
+.right{
+    background-color: cornflowerblue;
+    border-radius: 0px 10px 10px 0px;
+    color: white;
+}

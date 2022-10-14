@@ -1,0 +1,16 @@
+p{
+    font-size: 20px;
+    opacity: 0.7;
+}
+img{
+    width: 50px;
+}
+span{
+    font-size: 18px;
+    opacity: 0.7;
+}
+.main{
+    border: 1px solid white;
+    background-color: aliceblue;
+    border-radius: 20px;
+}

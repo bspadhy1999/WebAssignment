@@ -1,0 +1,16 @@
+/* start your css here */
+.img2{
+    width: 25px;
+    border-radius: 50%;
+}
+li{
+    margin: 0px 12px;
+}
+i{
+    font-size: 20px;
+}
+.color{
+    width: 4px;
+    background-color: blue;
+    height: 25px;
+}
