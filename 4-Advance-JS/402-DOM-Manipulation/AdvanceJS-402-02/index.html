@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      h1{
+        color: green;
+      }
+      body{
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    Start your code here
+   <div class="main">
+    <div class="content" id="banner">
+      <h1>Geekster</h1>
+      <h3>Click on the button to add image element</h3>
+      <button onclick="imgCreate()"><b>Click here</b></button>
+    </div>
+   </div>
+   <script>
+    function imgCreate(){
+        let contentref=document.createElement("h2");
+        contentref.innerText="Image Element Added.";
+        contentref.style.color="green";
+        let imgref=document.createElement("img");
+        imgref.src="https://mechomotive.com/wp-content/uploads/2021/08/Geekster_logo_full-1024x264-1.png";
+        imgref.style.width="15%";
+        document.getElementById("banner").appendChild(contentref);
+        document.getElementById("banner").appendChild(imgref);
+      }
+   </script>
   </body>
 </html>

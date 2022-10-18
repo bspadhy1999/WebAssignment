@@ -1,1 +1,14 @@
 /* start your styling here  */
+.main-section{
+    border: 1px solid black;
+}
+.hover-row:hover{
+   background-color: rgba(100, 148, 237, 0.775);
+}
+.hover-row{
+    border-bottom: 4px double black;
+}
+span{
+    font-size: 25px;
+    color: cornflowerblue;
+}

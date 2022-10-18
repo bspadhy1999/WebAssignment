@@ -1,1 +1,65 @@
 /* start your styling here  */
+.img-logo {
+  width: 50%;
+}
+.footer-logo {
+  width: 10%;
+}
+.main-img {
+  width: 100%;
+}
+.navbar-section {
+  background-color: rgba(184, 135, 11, 0.474);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+}
+li {
+  margin: 10px;
+}
+i {
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 30px;
+}
+.button-section {
+  color: white;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.779);
+}
+button {
+  border-radius: 5px;
+  border: none;
+}
+button span:hover {
+  opacity: 0.6;
+}
+.footer-section {
+  background-color: darkslategray;
+  color: white;
+  width: 100%;
+}
+span {
+  font-size: 17px;
+}
+.message-section {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 55px;
+  cursor: pointer;
+}
+body {
+  overflow-x: hidden;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+li:hover {
+  border-top: 3px solid rgba(90, 148, 23, 0.968);
+}
+.a-class {
+  color: black;
+}
+.a-class:hover {
+  color: rgba(90, 148, 23, 0.968);
+}

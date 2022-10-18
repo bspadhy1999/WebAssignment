@@ -1,1 +1,27 @@
 /* start your styling here  */
+.main-section{
+    background-color: black;
+    border-radius: 20px;
+}
+.num{
+    background-color: blueviolet;
+    border-radius: 3px;
+}
+body{
+    color: white;
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+.input{
+    background-color: white;
+    border-radius: 3px;
+}
+.clear{
+    background-color: rgba(255, 20, 145, 0.808);
+    border-radius: 3px;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

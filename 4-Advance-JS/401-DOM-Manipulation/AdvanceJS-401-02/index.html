@@ -5,8 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      body{
+        border-radius: 20px;
+        border: 3px solid black;
+        height: 97vh;
+        font-size: 20px;
+      }
+      .cotainer{
+        height: 97vh;
+        width: 97vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .childli{
+        border: 2px solid black;
+        width: 100px;
+       padding: 5px;
+       text-align: center;
+       border-radius: 5px;
+       margin-bottom: 2px;
+      }
+      ul{
+        list-style-type: none;
+      }
+    </style>
   </head>
   <body>
-    Start your code here
+    <div class="container">
+      <div class="main">
+          <ul class="has-children">
+            <li class="childli">1st Child</span></li>
+            <li class="childli">2nd Child</span></li>
+            <li class="childli">3rd Child</span></li>
+            <li class="childli">4th Child</span></li>
+            <li class="childli">5th Child</span></li>
+            <li class="childli">6th Child</span></li>
+            <li class="childli">7th Child</span></li>
+            <li class="childli">8th Child</span></li>
+            <li class="childli">9th Child</span></li>
+            <li class="childli">10th Child</span></li>
+            <li class="childli">11th Child</span></li>
+            <li class="childli">12th Child</span></li>
+            <li class="childli">13th Child</span></li>
+            <li class="childli">14th Child</span></li>
+            <li class="childli">15th Child</span></li>
+            <li class="childli">16th Child</span></li>
+            <li class="childli">17th Child</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      var lilist=document.querySelectorAll("li");
+      console.log(lilist.length)
+      for(var i=1; i<=lilist.length; i++){
+        if(i===1){
+          lilist[i].style.backgroundColor="blue";
+          lilist[i].style.color="white";
+        }
+        else if(i===lilist.length){
+          lilist[i].style.backgroundColor="palevioletred";
+          lilist[i].style.color="white";
+        }
+        else if(i===9){
+          lilist[i].style.backgroundColor="green";
+          lilist[i].style.color="white";
+        }
+        else if(i%2===0){
+          lilist[i].style.backgroundColor="lime";
+          lilist[i].style.color="white";
+        }
+      }
+    </script>
   </body>
 </html>

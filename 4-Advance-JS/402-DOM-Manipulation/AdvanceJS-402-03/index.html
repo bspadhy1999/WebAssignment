@@ -5,8 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping List</title>
+    <style>
+      li{
+        font-size: 20px;
+        font-weight: 700;
+      }
+      label{
+        font-size: 20px;
+      }
+    </style>
   </head>
   <body>
-    Start your code here
+    <div class="main">
+      <h1>My Shopping List</h1>
+      <label for="">Enter a new item:</label>
+      <input type="text" placeholder="Enter here" id="item">
+      <button onclick="addItem()"><b>Add Item</b></button>
+      <ul id="ulref"></ul>
+    </div>
+    <script>
+      function addItem(){
+        let liref=document.createElement("li");
+        liref.innerText=`${document.getElementById("item").value}<button>Delete</button>`;
+        document.getElementById("ulref").appendChild(liref);
+      }
+    </script>
   </body>
 </html>
