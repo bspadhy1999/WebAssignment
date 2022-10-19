@@ -25,9 +25,21 @@
     </div>
     <script>
       function addItem(){
+        var item=document.getElementById("item");
+        if(item.value===""){
+          alert("Please enter your Item");
+          return;
+        }
         let liref=document.createElement("li");
-        liref.innerText=`${document.getElementById("item").value}<button>Delete</button>`;
+        let buttonref=document.createElement("button");
+        buttonref.innerHTML="delete";
+        buttonref.onclick=deleteItem(this);
+        liref.innerText=`${document.getElementById("item").value} buttonref`;
         document.getElementById("ulref").appendChild(liref);
+        document.getElementById("item").value="";
+      }
+      function deleteItem(e){
+
       }
     </script>
   </body>

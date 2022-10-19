@@ -15,6 +15,8 @@
       .cotainer{
         height: 97vh;
         width: 97vw;
+      }
+      .main{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -59,21 +61,20 @@
     </div>
     <script>
       var lilist=document.querySelectorAll("li");
-      console.log(lilist.length)
-      for(var i=1; i<=lilist.length; i++){
-        if(i===1){
+      for(var i=0; i<lilist.length; i++){
+        if(i===0){
           lilist[i].style.backgroundColor="blue";
           lilist[i].style.color="white";
         }
-        else if(i===lilist.length){
+        else if(i===lilist.length-1){
           lilist[i].style.backgroundColor="palevioletred";
           lilist[i].style.color="white";
         }
-        else if(i===9){
+        else if(i===8){
           lilist[i].style.backgroundColor="green";
           lilist[i].style.color="white";
         }
-        else if(i%2===0){
+        else if(i%2===1){
           lilist[i].style.backgroundColor="lime";
           lilist[i].style.color="white";
         }

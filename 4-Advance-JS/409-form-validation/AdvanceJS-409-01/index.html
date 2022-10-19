@@ -4,9 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+      label{
+        font-size: 20px;
+      }
+      p{
+        text-align: center;
+        color: darkgoldenrod;
+      }
+    </style>
   </head>
   <body>
-    Start your code here
+    <h1 class="text-center">Validating Web Forms</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="form-group">
+          <label for="">First Name</label>
+          <input type="text" name="" id="firstName" class="form-control">
+          <p>First Letter of your First name must be capitalize and contain 3-16 characters</p>
+        </div>
+        <div class="form-group">
+          <label for="">Last Name</label>
+          <input type="text" name="" id="" class="form-control">
+          <p>First Letter of your Last name must be capitalize and contain 3-16 characters</p>
+        </div>
+        <div class="form-group">
+          <label for="">Email</label>
+          <input type="email" name="" id="" class="form-control">
+          <p>Email must be a valid address, e.g example@gmail.com</p>
+        </div>
+        <div class="form-group">
+          <label for="">Password</label>
+          <input type="password" name="" id="" class="form-control">
+          <p>Password must be alphanumeric (@, _ and - are also allowed) and between 6-20 characters</p>
+        </div>
+        <div class="form-group">
+          <label for="">Mobile</label>
+          <input type="number" name="" id="" class="form-control">
+          <p>A valid Mobile number (10 digits)</p>
+        </div>
+        <div class="form-group">
+          <label for="">Your Bio</label>
+          <input type="text" name="" id="" class="form-control">
+          <p>Bio must contain lowercase letters, underscores, hypens and be 8-50 characters</p>
+        </div>
+        <div class="text-center mt-3 mb-4">
+          <button class="btn btn-secondary btn-lg" onclick="fn()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      function fn(){
+        var firstName=document.getElementById("firstName").value;
+      if(firstName!==""){
+        var length=0;
+        var capitalize=0;
+        if(firstName.length>=3 && firstName.length<=16){
+            length++;
+         }
+         for (let i = 0; i <firstName.length; i++) {
+          var character=firstName[0];
+          for (let i = A; i <=Z; i++) {
+            if(character===i){
+              capitalize++;
+            } 
+          }
+        }
+        if(length===1 && capitalize===1){
+             alert("safafa"); 
+        }
+      }
+      }
+    </script>
   </body>
 </html>

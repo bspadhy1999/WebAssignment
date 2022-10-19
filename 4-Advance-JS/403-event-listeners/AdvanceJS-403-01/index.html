@@ -7,10 +7,12 @@
     <title>Document</title>
     <style>
       p{
-       font-size: 45px;
+       font-size: 55px;
        border: 2px solid black;
        box-shadow: 0px 0px 5px black;
        padding: 10px 40px;
+       font-weight: 900;
+       -webkit-text-stroke: 1px gray;
       }
       .main{
         height: 100%;
@@ -19,17 +21,20 @@
         justify-content: center;
         align-items: center;
       }
+      span{
+        color: chartreuse;
+        -webkit-text-stroke: 1px black;
+      }
     </style>
   </head>
-  <body onkeyup="inputFromKeyUP(event)" onkeypress="">
+  <body onkeyup="inputFromKey(event)">
     <div class="main">
       <div><p id="pid">Press any Keyboard Key</p></div>
     </div>
     <script>
       function inputFromKey(e){
         let pref=document.getElementById("pid");
-          pref.innerHTML=`You Pressed ${e.key}`;
-          console.log(e.key);
+          pref.innerHTML=`You Pressed <span>${e.key}</span>`;
       }
     </script>
   </body>
