@@ -31,15 +31,12 @@
           return;
         }
         let liref=document.createElement("li");
-        let buttonref=document.createElement("button");
-        buttonref.innerHTML="delete";
-        buttonref.onclick=deleteItem(this);
-        liref.innerText=`${document.getElementById("item").value} buttonref`;
+        liref.innerHTML=`${document.getElementById("item").value}<button style="margin:10px" onclick="deleteItem(this)">delete</button>`;
         document.getElementById("ulref").appendChild(liref);
         document.getElementById("item").value="";
       }
       function deleteItem(e){
-
+        e.parentElement.remove();
       }
     </script>
   </body>

@@ -1,6 +1,8 @@
 /* start your styling here  */
 body {
   font-family: "Mulish", sans-serif;
+  overflow-x: hidden;
+  width: auto;
 }
 .nav-section {
   background: #75b9f4;
@@ -76,7 +78,16 @@ p {
   border-radius: 15px;
 }
 .section3 {
-  background: #ffbd6d; 
+  background: #ffbd6d;
+  position: relative;
+}
+.cycle-img {
+  position: absolute;
+  bottom: -300px;
+  left: 350px;
+}
+.section4 {
+  margin-top: 200px;
 }
 .para-3 {
   font-size: 44px;
@@ -97,8 +108,16 @@ p {
   letter-spacing: 0.2px;
   color: #373f41;
 }
-.section4 {
+.section5 {
   background: rgba(46, 213, 115, 0.5);
+  position: relative;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.flyingman-img {
+  position: absolute;
+  right: 20px;
+  bottom: -160px;
 }
 .para-6 {
   font-size: 21px;
@@ -107,18 +126,18 @@ p {
   text-decoration-line: underline;
   color: #e5e5e5;
 }
-i{
-    font-size: 30px;
-    color: #4f55dd;
+i {
+  font-size: 30px;
+  color: #4f55dd;
 }
-input{
-    border: none;
-    outline: none;
-    background: #FFFFFF;
-border-radius: 11px;
-padding: 10px;
-padding-right: 120px;
-margin-right: 20px;
+input {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  border-radius: 11px;
+  padding: 10px;
+  padding-right: 120px;
+  margin-right: 20px;
 }
 .box-model {
   background: #ffffff;
@@ -140,21 +159,59 @@ margin-right: 20px;
   box-shadow: 10px 10px 50px 3px rgba(39, 92, 141, 0.1);
   border-radius: 0px 0px 12px 12px;
 }
-
-
 .fotter {
   background: #ffd281;
+  position: relative;
 }
-.m-icon{
-    width: 50px;
+.ring-img1 {
+  position: absolute;
+  top: -80px;
+  right: 30px;
 }
-.m-sec{
-    background-color: aliceblue;
-    border-radius: 3px;
+.ring-img2 {
+  position: absolute;
+  bottom: 35px;
+  right: 20px;
 }
-span{
-    margin: 10px;
-    font-size: 17px;
-    font-weight: 900;
+.ring-img3 {
+  position: absolute;
+  bottom: 55px;
+  left: 20px;
 }
-
+.m-icon {
+  width: 38px;
+}
+.m-sec {
+  background-color: aliceblue;
+  border-radius: 3px;
+  width: 55px;
+  height: 45px;
+}
+span {
+  margin: 10px;
+  font-size: 17px;
+  font-weight: 900;
+}
+.section6 {
+  margin-bottom: 60px;
+  margin-top: 80px;
+}
+.section7 {
+  margin-bottom: 110px;
+}
+.section8 {
+  margin-top: 70px;
+}
+.suscribe {
+  font-size: 50px;
+  font-weight: 800;
+  color: #f73c6b;
+  -webkit-text-stroke: 1px #ffd281;
+  position: absolute;
+  top: -15px;
+  right: 480px;
+  -webkit-transform: rotate(18deg);
+}
+ul {
+  margin-left: 450px;
+}

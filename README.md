@@ -49,7 +49,7 @@ How to use this repository
 | 5     | CSS   | [CSS-FLEXBOX](./3-CSS/305-CSS-Flexbox/)    [CSS-305-04]                      | https://bspadhy1999.github.io/WebAssignment/3-CSS/305-CSS-Flexbox/CSS-305-04/index.html |
 | 5     | CSS   | [CSS-FLEXBOX](./3-CSS/305-CSS-Flexbox/)    [CSS-305-05]                      | https://bspadhy1999.github.io/WebAssignment/3-CSS/305-CSS-Flexbox/CSS-305-05/index.html |
 | 5     | CSS   | [CSS-FLEXBOX](./3-CSS/305-CSS-Flexbox/)    [CSS-305-06]                      | https://bspadhy1999.github.io/WebAssignment/3-CSS/305-CSS-Flexbox/CSS-305-06/index.html |
-| 6     | CSS   | [CSS-GRID](./3-CSS/306-CSS-Grid/)          [CSS-306-01]                      |             |
+| 6     | CSS   | [CSS-GRID](./3-CSS/306-CSS-Grid/)          [CSS-306-01]                      | https://bspadhy1999.github.io/WebAssignment/3-CSS/306-CSS-Grid/CSS-306-01/index.html |
 | 6     | CSS   | [CSS-GRID](./3-CSS/306-CSS-Grid/)          [CSS-306-02]                      | https://bspadhy1999.github.io/WebAssignment/3-CSS/306-CSS-Grid/CSS-306-02/index.html |
 | 6     | CSS   | [CSS-GRID](./3-CSS/306-CSS-Grid/)          [CSS-306-03]                      |  |
 | 7     | CSS   | [CSS-SELECTORS](./3-CSS/307-Advance-CSS-Selectors/)    [CSS-307-01]          | https://bspadhy1999.github.io/WebAssignment/3-CSS/307-Advance-CSS-Selectors/CSS-307-01/index.html |
@@ -73,7 +73,7 @@ How to use this repository
 | 3     | JS    | [EVENT-LISTNERS](./4-Advance-JS/403-Event-Listeners/)       [AdvanceJS-403-03]           | https://bspadhy1999.github.io/WebAssignment/4-Advance-JS/403-event-listeners/AdvanceJS-403-03/index.html |
 | 4     | JS    | [MINI-PROJECT](./4-Advance-JS/404-Mini-Project-Solar%20System/)   [AdvanceJS-404-01]       | https://bspadhy1999.github.io/WebAssignment/4-Advance-JS/404-Mini-Project-Solar%20System/AdvanceJS-404-01/index.html |
 | 5     | JS    | [WORLD-COUNTRIES](./4-Advance-JS/405-WorldCountries-Data-Visualization/) [AdvanceJS-405-01] |             |
-| 6     | JS    | [DOM-VISUALATION](./4-Advance-JS/406-Data-visualization/)     [AdvanceJS-406-01]          |             |
+| 6     | JS    | [DOM-VISUALATION](./4-Advance-JS/406-Data-visualization/)     [AdvanceJS-406-01]          | https://bspadhy1999.github.io/WebAssignment/4-Advance-JS/406-Data-visualization/AdvanceJS-406-01/index.html |
 | 7     | JS    | [EMOJI-SEARCH](./4-Advance-JS/407-Emoji-search/)              [AdvanceJS-407-01]           |             |
 | 8     | JS    | [LEADERBOARD](./4-Advance-JS/408-leaderboard/)    [AdvanceJS-408-01]                       |             |
 | 9     | JS    | [FROM-VALIDATION](./4-Advance-JS/409-form-validation/)          [AdvanceJS-409-01]         |             |

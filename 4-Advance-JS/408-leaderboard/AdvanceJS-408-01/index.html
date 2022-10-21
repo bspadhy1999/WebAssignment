@@ -1,12 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+  <style>
+    .addStyle {
+      box-shadow: 0 0 5px black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mx-auto">
+        <div class="card">
+          <div class="card-header bg-primary text-white text-center">
+            <h4>30 Days JS Challange Leaderboard</h4>
+          </div>
+          <div class="card-body text-center">
+            <div class="form-group mt-3">
+              <input type="text" placeholder="Enter your First Name" class="form-control" id="fnameDyn">
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" placeholder="Enter your Last Name" class="form-control" id="lnameDyn">
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" placeholder="Enter your Country" class="form-control" id="countryDyn">
+            </div>
+            <div class="form-group mt-3">
+              <input type="number" placeholder="Player Score" class="form-control" id="pscoreDyn">
+            </div>
+            <button class="btn btn-outline-primary mt-3" onclick="createTableDyn()">Add Player</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 mx-auto mt-3" id="tableColDyn">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script>
+    //create table
+    var tableref = document.createElement("table");
+    var theadref = document.createElement("thead");
+    var tbodyref = document.createElement("tbody");
+    var tr1 = document.createElement("tr");
+    var th1 = document.createElement("th");
+    var th2 = document.createElement("th");
+    var th3 = document.createElement("th");
+    var th4 = document.createElement("th");
+    var th5 = document.createElement("th");
+    var th6 = document.createElement("th");
+    var th7 = document.createElement("th");
+    //insert the data
+    th1.innerText = "NAME";
+    th2.innerText = "COUNTRY";
+    th3.innerText = "PLAYER SCORE";
+    th4.innerText = "EDIT";
+    th5.innerText = "DELETE";
+    th6.innerText = "PLAYER SCORE +5";
+    th7.innerText = "PLAYER SCORE -5";
+    tr1.appendChild(th1);
+    tr1.appendChild(th2);
+    tr1.appendChild(th3);
+    tr1.appendChild(th4);
+    tr1.appendChild(th5);
+    tr1.appendChild(th6);
+    tr1.appendChild(th7);
+
+    const getTime=()=>{
+            let d=new Date();
+            let day=d.getDate();
+            let mo=d.getMonth();
+            let year=d.getFullYear();
+            let h=d.getHours();
+            let amPm=h>=12?"PM":"AM";
+            h=h%12;
+            h=h==0?12:h;
+            let m=d.getMinutes();
+            m=m>9?m:"0"+m;
+            return`${day}-${mo}-${year}, ${h}:${m} ${amPm}`;
+        }
+
+    let createTableDyn = () => {
+      if (document.getElementById("fnameDyn").value === "") {
+        alert("please enter your First Name");
+        return;
+      }
+      else if (document.getElementById("lnameDyn").value === "") {
+        alert("please enter your Last Name");
+        return;
+      }
+      else if (document.getElementById("countryDyn").value === "") {
+        alert("please enter your Country");
+        return;
+      }
+      else if (document.getElementById("pscoreDyn").value === "") {
+        alert("please enter Player Score");
+        return;
+      }
+      theadref.appendChild(tr1);
+      tableref.appendChild(theadref);
+      tableref.appendChild(tbodyref); 
+      tbodyref.innerHTML += `
+        <tr>
+          <td scope="row">${document.getElementById("fnameDyn").value} ${document.getElementById("lnameDyn").value} <br> ${getTime()} </td>
+          <td>${document.getElementById("countryDyn").value}</td>
+          <td>${document.getElementById("pscoreDyn").value}</td>
+          <td><i class="fa-solid fa-pen-to-square" onClick="editPostDyn(this)" style="color:blue; cursor: pointer;"></i></td>
+          <td><i class="fa-solid fa-trash-can" onClick="deletePostDyn(this)" style="color:red; cursor: pointer;"></i></td>
+          <td><span style="color:green; cursor: pointer;" onClick="add5Dyn(this)"><i class="fa-solid fa-plus" style="margin:5px"></i><i class="fa-solid fa-5"></i></span></td>
+          <td><span style="color:orange; cursor: pointer;" onClick="minus5Dyn(this)"><i class="fa-solid fa-minus" style="margin:5px"></i><i class="fa-solid fa-5"></i><span></td>
+          </tr>`;
+      theadref.className = "table-dark";
+      tableref.className = "table table-hover addStyle";
+      document.getElementById("tableColDyn").appendChild(tableref);
+      document.getElementById("fnameDyn").value = "";
+      document.getElementById("lnameDyn").value = "";
+      document.getElementById("countryDyn").value = "";
+      document.getElementById("pscoreDyn").value = "";
+    }
+    let editPostDyn = (e) => {
+      let fnameDyn = document.getElementById("fnameDyn");
+      let lnameDyn = document.getElementById("lnameDyn");
+      let countryDyn = document.getElementById("countryDyn");
+      let pscoreDyn = document.getElementById("pscoreDyn");
+      fnameDyn.value = e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.childNodes.innerHTML;
+      lnameDyn.value = e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.childNodes.innerHTML;
+      countryDyn.value = e.parentElement.previousElementSibling.previousElementSibling.innerHTML;
+      pscoreDyn.value = e.parentElement.previousElementSibling.innerHTML;
+      if (tbodyref.rows.length == 1) {
+        theadref.innerHTML = "";
+      }
+      e.parentElement.parentElement.remove();
+    }
+    let deletePostDyn = (e) => {
+      if (tbodyref.rows.length == 1) {
+        theadref.innerHTML = "";
+        e.parentElement.parentElement.remove();
+      } else {
+        e.parentElement.parentElement.remove();
+      }
+    }
+    let add5Dyn=(e)=>{
+      let currentPlayerScore=e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+      e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML=currentPlayerScore+5;
+    };
+    let minus5Dyn=(e)=>{
+      let currentPlayerScore=e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+      e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML=currentPlayerScore-5;
+    };
+  </script>
+</body>
+
 </html>

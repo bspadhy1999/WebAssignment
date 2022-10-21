@@ -1,12 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    Start your code here
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>World Countries List</title>
+  <style>
+    input {
+      border: none;
+      outline: none;
+      border-radius: 25px 0px 0px 25px;
+      width: 450px;
+      height: 40px;
+      padding-left: 30px;
+      border-top: 2px solid blue;
+      border-left: 2px solid blue;
+      border-bottom: 2px solid blue;
+    }
+
+    ::placeholder {
+      text-align: center;
+    }
+
+    body {
+      background-image: url(https://t4.ftcdn.net/jpg/02/66/19/63/360_F_266196371_oqttLZeBtdpgGhfbXGpOCfRHF9X3De5s.jpg);
+      background-repeat: no-repeat;
+      background-size: 100vw 70vh;
+      color: aliceblue;
+      overflow-x: hidden;
+    }
+
+    .search-icon {
+      border-radius: 2px 25px 25px 0px;
+      color: blue;
+      background-color: white;
+      padding-right: 30px;
+      border-top: 2px solid blue;
+      border-right: 2px solid blue;
+      border-bottom: 2px solid blue;
+      height: 40px;
+    }
+
+    .para1 {
+      font-size: 60px;
+      font-weight: 900;
+      letter-spacing: 5px;
+      -webkit-text-stroke: 3px slateblue;
+    }
+
+    .main {
+      width: 100vw;
+      height: 70vh;
+    }
+
+    #countryPara {
+      font-size: 25px;
+      font-weight: 900;
+    }
+
+    .singleCountry {
+      background-image: url(https://images.pexels.com/photos/592753/pexels-photo-592753.jpeg?cs=srgb&dl=pexels-aaditya-arora-592753.jpg&fm=jpg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 150px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      font-weight: 800;
+      -webkit-text-stroke: 1px slateblue;
+      letter-spacing: 1px;
+    }
+
+    h4 {
+      -webkit-text-stroke: 1px slateblue;
+      font-weight: 900;
+    }
+
+    h5 {
+      -webkit-text-stroke: 1px slateblue;
+      font-weight: 900;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="row">
+      <div class="col-md-8 mt-5 mx-auto text-center">
+        <p class="para1">World Countries List</p>
+        <h5>Total no. of Countries: 193 </h5>
+        <div class="mt-4">
+          <button class="btn btn-primary me-1" onclick="countrySearchWithStarting()">STARTING WORD</button>
+          <button class="btn btn-primary me-1">SEARCH WITH ANY WORD</button>
+          <button class="btn btn-primary" id="countrySearchDesc" onclick="countrySearchDescOrder()"><i
+              class="fa-solid fa-arrow-up-a-z"></i></button> <br>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+          <input type="text" placeholder="Search country..." onkeyup="fnCountrySearch(event)" id="inputCountry">
+          <div class="search-icon pt-1"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+        <h4 class="mt-3">Countries starts with <span id="h4InputSpan"></span> are: <span></span> </h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-evenly mt-5" id="AllCountryListMain"></div>
+  </div>
+  <p id="countryPara" style="color: black;"></p>
+  <script src="countries.js"></script>
+</body>
+
 </html>
