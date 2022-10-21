@@ -1,47 +1,24 @@
 /* start your styling here  */
-.main-section{
-    background-color: rgba(0, 0, 0, 0.81);
-    display: grid;
-    grid-template-columns: 230px 500px 245px ;
-    width: 1000px;
-    padding: 15px;
+body{
+    background-color: rgba(0, 0, 0, 0.793);
 }
-.left-section-divs{
-    background-color: fuchsia;
-    width: 200px;
-    height: 110px;
-   margin-bottom: 15px;
+.box1{
+    background-image: linear-gradient(to bottom left, rgba(242, 11, 119, 0.853), rgba(255, 247, 0, 0.919));
+    height: 150px;
 }
-.right-section-lower{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content: center;
-    align-items: center;
+.box2{
+    background-image: linear-gradient(to bottom left, rgb(227, 11, 242), rgba(239, 227, 227, 0.919));
+    height: 315px;
 }
-.mid-upper-div{
-    height: 235px;
-    background-color: aqua;
-    margin: 0px 15px 15px 0px;
+.box3{
+    background-image: linear-gradient(to bottom left, rgba(11, 223, 242, 0.853), rgba(0, 149, 255, 0.919));
+    height: 150px;
 }
-.mid-upper-div .mid-lower-div .mid-lower-div-left .left-section-divs {
-    background-color: fuchsia;
-    width: 200px;
-    height: 110px;
-    display: grid;
-    grid-template-columns: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 15px 0px 0px 0px;
+img{
+    width: 25px;
 }
-.mid-lower-div-right{
-    display: grid;
-    grid-template-columns: 235px 275px;
-    background-color: aqua;
-    width: 375px;
-    height: 235px;
-}
-.mid-lower-div{
-    display: grid;
-    grid-template-columns: 30% 50%;
-    grid-gap: 15x;
+.img-sec{
+    display: flex;
+   justify-content: center;
+   align-items: center;
 }
