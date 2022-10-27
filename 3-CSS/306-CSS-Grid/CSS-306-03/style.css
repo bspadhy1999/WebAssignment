@@ -1,1 +1,6 @@
 /* start your styling here  */
+.main{
+    display: grid;
+    grid-template-rows: 200px 300px 400px;
+    grid-template-columns: 200px 200px 200px 200px;
+}
