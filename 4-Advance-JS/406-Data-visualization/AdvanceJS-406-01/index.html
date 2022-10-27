@@ -88,6 +88,9 @@
       -webkit-text-stroke: 1px slateblue;
       font-weight: 900;
     }
+   b{
+    color: red;
+   }
   </style>
 </head>
 
@@ -98,8 +101,8 @@
         <p class="para1">World Countries List</p>
         <h5>Total no. of Countries: 193 </h5>
         <div class="mt-4">
-          <button class="btn btn-primary me-1" onclick="countrySearchWithStarting()">STARTING WORD</button>
-          <button class="btn btn-primary me-1">SEARCH WITH ANY WORD</button>
+          <button class="btn btn-primary me-1" onclick="countrySearchWithStarting()" id="sw">STARTING WORD</button>
+          <button class="btn btn-primary me-1" onclick="countrySearchWithAnyKeyWord()" id="swaw">SEARCH WITH ANY WORD</button>
           <button class="btn btn-primary" id="countrySearchDesc" onclick="countrySearchDescOrder()"><i
               class="fa-solid fa-arrow-up-a-z"></i></button> <br>
         </div>
@@ -107,7 +110,7 @@
           <input type="text" placeholder="Search country..." onkeyup="fnCountrySearch(event)" id="inputCountry">
           <div class="search-icon pt-1"><i class="fa-solid fa-magnifying-glass"></i></div>
         </div>
-        <h4 class="mt-3">Countries starts with <span id="h4InputSpan"></span> are: <span></span> </h4>
+        <h4 class="mt-3" id="inputShow">Countries starts with <span id="h4InputSpan"></span> are: <span></span> </h4>
       </div>
     </div>
   </div>

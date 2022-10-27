@@ -22745,3 +22745,14 @@ const emojiList = [
   , "ios_version": "12.1"
   }
 ];
+
+var tbody=document.getElementById("tbody");
+for (let i = 0; i < emojiList.length; i++) {
+  tbody.innerHTML+=`
+  <tr style="font-size: 25px;">
+    <td>${emojiList[i].emoji}</td>
+    <td>${emojiList[i].aliases}</td>
+    <td>${emojiList[i].description}</td>
+  </tr>
+  `;
+}

@@ -142,8 +142,8 @@
       let lnameDyn = document.getElementById("lnameDyn");
       let countryDyn = document.getElementById("countryDyn");
       let pscoreDyn = document.getElementById("pscoreDyn");
-      fnameDyn.value = e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.childNodes.innerHTML;
-      lnameDyn.value = e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.childNodes.innerHTML;
+      fnameDyn.value = e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.innerHTML;
+      lnameDyn.value = e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
       countryDyn.value = e.parentElement.previousElementSibling.previousElementSibling.innerHTML;
       pscoreDyn.value = e.parentElement.previousElementSibling.innerHTML;
       if (tbodyref.rows.length == 1) {

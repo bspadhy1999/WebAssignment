@@ -193,13 +193,17 @@ const countries = [
   "Zambia",
   "Zimbabwe",
 ];
-for (let i = 0; i < countries.length; i++) {
-  var countryList = countries[i];
-  let divref = document.createElement("div");
-  divref.className = "col-md-2 m-1 singleCountry";
-  divref.innerHTML = `<p>${countryList}</p>`;
-  document.getElementById("AllCountryListMain").appendChild(divref);
+
+function showAll(){
+  for (let i = 0; i < countries.length; i++) {
+    var countryList = countries[i];
+    let divref = document.createElement("div");
+    divref.className = "col-md-2 m-1 singleCountry";
+    divref.innerHTML = `<p>${countryList.toUpperCase()}</p>`;
+    document.getElementById("AllCountryListMain").appendChild(divref);
+  }
 }
+showAll();
 function countrySearchDescOrder() {
   let countrySearchDesc = document.getElementById("countrySearchDesc");
   var AllCountryListMain = document.getElementById("AllCountryListMain");
@@ -227,11 +231,56 @@ function countrySearchDescOrder() {
     }
   }
 }
-let countrySearchWithStarting = () => {};
-let fnCountrySearch = (e) => {
+document.getElementById("inputShow").style.display="none";
+let countrySearchWithStarting = () => {
+  var AllCountryListMain=document.getElementById("AllCountryListMain");
+  AllCountryListMain.innerHTML="";
   let inputCountry = document.getElementById("inputCountry");
-  let h4InputSpan=document.getElementById("h4InputSpan");
-  h4InputSpan.innerHTML=`<b>${inputCountry.value}</b>`;
+  var filter=inputCountry.value.toUpperCase();
+  for (let i = 0; i < countries.length; i++) {
+    var countryList = countries[i].toUpperCase();
+    if(countryList.startsWith(filter)===true){
+      let divref = document.createElement("div");
+      divref.className = "col-md-2 m-1 singleCountry";
+      divref.innerHTML = `<p>${countryList}</p>`;
+      AllCountryListMain.appendChild(divref);
+    }
+  }
+};
+let countrySearchWithAnyKeyWord =()=>{
+  var AllCountryListMain=document.getElementById("AllCountryListMain");
+  AllCountryListMain.innerHTML="";
+  let inputCountry = document.getElementById("inputCountry");
+  var filter=inputCountry.value.toUpperCase();
+  for (let i = 0; i < countries.length; i++) {
+    var countryList = countries[i].toUpperCase();
+    if(countryList.indexOf(filter)>-1){
+      let divref = document.createElement("div");
+      divref.className = "col-md-2 m-1 singleCountry";
+      divref.innerHTML = `<p>${countryList}</p>`;
+      AllCountryListMain.appendChild(divref);
+    }
+  }
+}
+let fnCountrySearch = (e) => {
+  if(e.key!==""){
+    let inputCountry = document.getElementById("inputCountry");
+    let h4InputSpan=document.getElementById("h4InputSpan");
+    h4InputSpan.innerHTML=`<b><i>${inputCountry.value}</i></b>`;
+    if(inputCountry.value !== ""){
+      document.getElementById("inputShow").style.display="block";
+      if(document.getElementById("sw").clicked==="true"){
+        countrySearchWithStarting();
+      }
+      else if(document.getElementById("swaw").clicked==="true"){
+        countrySearchWithAnyKeyWord();
+      }
+    }
+    else{
+      document.getElementById("inputShow").style.display="none";
+      showAll();
+    }
+  }
 };
 
-let pattern=new RegExp
+

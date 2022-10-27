@@ -2862,3 +2862,35 @@ const countries_data = [
 			"area": 390757
 	}
 ]
+var PopulationLanguage=document.getElementById("PopulationLanguage");
+PopulationLanguage.innerText="10 Most Populated Countries in the World";
+countries_data.sort((a,b)=> b.population-a.population);
+	var tbodyRef= document.getElementById("tbodyRef");
+	for (let i = 0; i < 10; i++) {
+		tbodyRef.innerHTML+=`
+		<tr>
+		<td>${countries_data[i].name}</td>
+		<td>${countries_data[i].population}</td>
+		</tr>
+		`;
+	}
+function checkPopulation(){
+	PopulationLanguage.innerText="";
+	PopulationLanguage.innerText="10 Most Populated Countries in the World";
+
+	countries_data.sort((a,b)=> b.population-a.population);
+	var tbodyRef= document.getElementById("tbodyRef");
+	for (let i = 0; i < 10; i++) {
+		tbodyRef.innerHTML+=`
+		<tr>
+		<td>${countries_data[i].name}</td>
+		<td>${countries_data[i].population}</td>
+		</tr>
+		`;
+	}
+}
+function checkLanguage(){
+	PopulationLanguage.innerText="";
+	PopulationLanguage.innerText="10 Most Spoken Languages in the World";
+	
+}
