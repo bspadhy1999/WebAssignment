@@ -194,7 +194,9 @@ const countries = [
   "Zimbabwe",
 ];
 
-function showAll(){
+function showAll() {
+  var AllCountryListMain = document.getElementById("AllCountryListMain");
+  AllCountryListMain.innerHTML = "";
   for (let i = 0; i < countries.length; i++) {
     var countryList = countries[i];
     let divref = document.createElement("div");
@@ -231,56 +233,51 @@ function countrySearchDescOrder() {
     }
   }
 }
-document.getElementById("inputShow").style.display="none";
+document.getElementById("inputShow").style.display = "none";
 let countrySearchWithStarting = () => {
-  var AllCountryListMain=document.getElementById("AllCountryListMain");
-  AllCountryListMain.innerHTML="";
   let inputCountry = document.getElementById("inputCountry");
-  var filter=inputCountry.value.toUpperCase();
+  let inputShow = document.getElementById("inputShow");
+  inputShow.style.display = "block";
+  var AllCountryListMain = document.getElementById("AllCountryListMain");
+  AllCountryListMain.innerHTML = "";
+  var filter = inputCountry.value.toUpperCase();
+  let count = 0;
   for (let i = 0; i < countries.length; i++) {
     var countryList = countries[i].toUpperCase();
-    if(countryList.startsWith(filter)===true){
+    if (countryList.startsWith(filter) === true) {
       let divref = document.createElement("div");
       divref.className = "col-md-2 m-1 singleCountry";
       divref.innerHTML = `<p>${countryList}</p>`;
       AllCountryListMain.appendChild(divref);
+      count++;
     }
   }
+  inputShow.innerHTML = `Countries starts with <span style="color:red">${inputCountry.value.toUpperCase()}</span> are: <span style="color:red">${count}</span>`;
 };
-let countrySearchWithAnyKeyWord =()=>{
-  var AllCountryListMain=document.getElementById("AllCountryListMain");
-  AllCountryListMain.innerHTML="";
+let countrySearchWithAnyKeyWord = () => {
+  let inputShow = document.getElementById("inputShow");
+  inputShow.style.display = "block";
+  var AllCountryListMain = document.getElementById("AllCountryListMain");
+  AllCountryListMain.innerHTML = "";
   let inputCountry = document.getElementById("inputCountry");
-  var filter=inputCountry.value.toUpperCase();
+  var filter = inputCountry.value.toUpperCase();
+  let count = 0;
   for (let i = 0; i < countries.length; i++) {
     var countryList = countries[i].toUpperCase();
-    if(countryList.indexOf(filter)>-1){
+    if (countryList.indexOf(filter) > -1) {
       let divref = document.createElement("div");
       divref.className = "col-md-2 m-1 singleCountry";
       divref.innerHTML = `<p>${countryList}</p>`;
       AllCountryListMain.appendChild(divref);
+      count++;
     }
+  }
+  inputShow.innerHTML = `Countries containing <span style="color:red">${inputCountry.value.toUpperCase()}</span> are: <span style="color:red">${count}</span>`;
+};
+function fnCountrySearch(e) {
+  let inputCountry = document.getElementById("inputCountry");
+  if (inputCountry.value === "") {
+    showAll();
+    document.getElementById("inputShow").style.display = "none";
   }
 }
-let fnCountrySearch = (e) => {
-  if(e.key!==""){
-    let inputCountry = document.getElementById("inputCountry");
-    let h4InputSpan=document.getElementById("h4InputSpan");
-    h4InputSpan.innerHTML=`<b><i>${inputCountry.value}</i></b>`;
-    if(inputCountry.value !== ""){
-      document.getElementById("inputShow").style.display="block";
-      if(document.getElementById("sw").clicked==="true"){
-        countrySearchWithStarting();
-      }
-      else if(document.getElementById("swaw").clicked==="true"){
-        countrySearchWithAnyKeyWord();
-      }
-    }
-    else{
-      document.getElementById("inputShow").style.display="none";
-      showAll();
-    }
-  }
-};
-
-

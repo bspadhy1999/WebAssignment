@@ -12,7 +12,7 @@
       }
       p{
         text-align: center;
-        color: darkgoldenrod;
+        color: red;
       }
     </style>
   </head>
@@ -21,65 +21,138 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 mx-auto">
-        <div class="form-group">
-          <label for="">First Name</label>
-          <input type="text" name="" id="firstName" class="form-control">
-          <p>First Letter of your First name must be capitalize and contain 3-16 characters</p>
-        </div>
-        <div class="form-group">
-          <label for="">Last Name</label>
-          <input type="text" name="" id="" class="form-control">
-          <p>First Letter of your Last name must be capitalize and contain 3-16 characters</p>
-        </div>
-        <div class="form-group">
-          <label for="">Email</label>
-          <input type="email" name="" id="" class="form-control">
-          <p>Email must be a valid address, e.g example@gmail.com</p>
-        </div>
-        <div class="form-group">
-          <label for="">Password</label>
-          <input type="password" name="" id="" class="form-control">
-          <p>Password must be alphanumeric (@, _ and - are also allowed) and between 6-20 characters</p>
-        </div>
-        <div class="form-group">
-          <label for="">Mobile</label>
-          <input type="number" name="" id="" class="form-control">
-          <p>A valid Mobile number (10 digits)</p>
-        </div>
-        <div class="form-group">
-          <label for="">Your Bio</label>
-          <input type="text" name="" id="" class="form-control">
-          <p>Bio must contain lowercase letters, underscores, hypens and be 8-50 characters</p>
-        </div>
-        <div class="text-center mt-3 mb-4">
-          <button class="btn btn-secondary btn-lg" onclick="fn()">Submit</button>
-        </div>
+        <form action="">
+          <div class="form-group">
+            <label for="">First Name</label>
+            <input type="text" name="" id="firstName" class="form-control">
+            <div class="invalid-feedback"><p>First Letter of your First name must be capitalize and contain 3-16 characters</p></div>
+          </div>
+          <div class="form-group">
+            <label for="">Last Name</label>
+            <input type="text" name="" id="lastName" class="form-control">
+            <div class="invalid-feedback"><p>First Letter of your Last name must be capitalize and contain 3-16 characters</p></div>
+          </div>
+          <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" name="" id="email" class="form-control">
+            <div class="invalid-feedback"><p>Email must be a valid address, e.g example@gmail.com</p></div>
+          </div>
+          <div class="form-group">
+            <label for="">Password</label>
+            <input type="password" name="" id="password" class="form-control">
+            <div class="invalid-feedback"><p>Password must be alphanumeric (@, _ and - are also allowed) and between 6-20 characters</p></div>
+          </div>
+          <div class="form-group">
+            <label for="">Mobile</label>
+            <input type="number" name="" id="mobile" class="form-control">
+            <div class="invalid-feedback"><p>A valid Mobile number (10 digits)</p></div>
+          </div>
+          <div class="form-group">
+            <label for="">Your Bio</label>
+            <input type="text" name="" id="bio" class="form-control">
+            <div class="invalid-feedback"><p>Bio must contain lowercase letters, underscores, hypens and be 8-50 characters</p></div>
+          </div>
+          <div class="text-center mt-3 mb-4">
+            <button id="submitData" class="btn btn-lg">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
-      function fn(){
-        var firstName=document.getElementById("firstName").value;
-      if(firstName!==""){
-        var length=0;
-        var capitalize=0;
-        if(firstName.length>=3 && firstName.length<=16){
-            length++;
-         }
-         for (let i = 0; i <firstName.length; i++) {
-          var character=firstName[0];
-          for (let i = A; i <=Z; i++) {
-            if(character===i){
-              capitalize++;
-            } 
-          }
+      const firstName=document.getElementById("firstName");
+      const lastName=document.getElementById("lastName");
+      const email=document.getElementById("email");
+      const password=document.getElementById("password");
+      const mobile=document.getElementById("mobile");
+      const bio=document.getElementById("bio");
+      var validFirstName=false;
+      var validLastName=false;
+      var validEmail=false;
+      var validPassword=false;
+      var validMobile=false;
+      var validBio=false;
+      firstName.addEventListener('blur',()=>{
+        let regex=/^[A-Z]([a-zA-Z\s+]){2,15}$/;
+        let str=firstName.value;
+        if(regex.test(str)){
+          firstName.classList.remove('is-invalid');
+          firstName.classList.add('is-valid');
+          validFirstName=true;
         }
-        if(length===1 && capitalize===1){
-             alert("safafa"); 
+        else{
+          firstName.classList.add('is-invalid');
         }
+      });
+      lastName.addEventListener('blur',()=>{
+        let regex=/^[A-Z]([a-z]){2,15}$/;
+        let str=lastName.value;
+        if(regex.test(str)){
+          lastName.classList.remove('is-invalid');
+          lastName.classList.add('is-valid');
+          validLastName=true;
+        }
+        else{
+          lastName.classList.add('is-invalid');
+        }
+      });
+      email.addEventListener('blur',()=>{
+        let regex=/^([a-zA-Z0-9\_\.\-]+)@([a-zA-Z0-9\_\.\-]+)\.([a-zA-Z]){2,7}$/;
+        let str=email.value;
+        if(regex.test(str)){
+          email.classList.remove('is-invalid');
+          email.classList.add('is-valid');
+          validEmail=true;
+        }
+        else{
+          email.classList.add('is-invalid');
+        }
+      });
+      password.addEventListener('blur',()=>{
+        let regex=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{5,19}$/;
+        let str=password.value;
+        if(regex.test(str)){
+          password.classList.remove('is-invalid');
+          password.classList.add('is-valid');
+          validPassword=true;
+        }
+        else{
+          password.classList.add('is-invalid');
+        }
+      });
+      mobile.addEventListener('blur',()=>{
+        let regex=/^([0-9]){10}$/;
+        let str=mobile.value;
+        if(regex.test(str)){
+          mobile.classList.remove('is-invalid');
+          mobile.classList.add('is-valid');
+          validMobile=true;
+        }
+        else{
+          mobile.classList.add('is-invalid');
+        }
+      });
+      bio.addEventListener('blur',()=>{
+        let regex=/^([a-zA-Z\_\-\s+]){7,49}$/;
+        let str=bio.value;
+        if(regex.test(str)){
+          bio.classList.remove('is-invalid');
+          bio.classList.add('is-valid');
+          validBio=true;
+        }
+        else{
+          bio.classList.add('is-invalid');
+        }
+      });
+      let submitData=document.getElementById("submitData");
+      if(validFirstName && validLastName && validEmail && validPassword && validMobile && validBio){
+       submitData.classList.remove("btn-danger");
+       submitData.classList.add("btn-success");
       }
+      else{
+        submitData.classList.add("btn-danger");
       }
     </script>
   </body>

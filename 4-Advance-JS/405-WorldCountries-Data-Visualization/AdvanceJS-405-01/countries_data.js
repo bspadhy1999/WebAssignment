@@ -2864,12 +2864,15 @@ const countries_data = [
 ]
 var PopulationLanguage=document.getElementById("PopulationLanguage");
 PopulationLanguage.innerText="10 Most Populated Countries in the World";
+var tbodyRef= document.getElementById("tbodyRef");
 countries_data.sort((a,b)=> b.population-a.population);
-	var tbodyRef= document.getElementById("tbodyRef");
+	tbodyRef.innerHTML="";
 	for (let i = 0; i < 10; i++) {
+		let percent=(countries_data[i].population/worldPopulation)*100;
 		tbodyRef.innerHTML+=`
 		<tr>
 		<td>${countries_data[i].name}</td>
+		<td><div class="status" style='width:${percent}%'></div></td>
 		<td>${countries_data[i].population}</td>
 		</tr>
 		`;
@@ -2877,13 +2880,15 @@ countries_data.sort((a,b)=> b.population-a.population);
 function checkPopulation(){
 	PopulationLanguage.innerText="";
 	PopulationLanguage.innerText="10 Most Populated Countries in the World";
-
 	countries_data.sort((a,b)=> b.population-a.population);
-	var tbodyRef= document.getElementById("tbodyRef");
+	tbodyRef.innerHTML="";
+	let worldPopulation=7693165599;
 	for (let i = 0; i < 10; i++) {
+		let percent=(countries_data[i].population/worldPopulation)*100;
 		tbodyRef.innerHTML+=`
 		<tr>
 		<td>${countries_data[i].name}</td>
+		<td><span class="status" style='width:${percent}%'></span></td>
 		<td>${countries_data[i].population}</td>
 		</tr>
 		`;
@@ -2892,5 +2897,31 @@ function checkPopulation(){
 function checkLanguage(){
 	PopulationLanguage.innerText="";
 	PopulationLanguage.innerText="10 Most Spoken Languages in the World";
-	
+	let countries={};
+	const sortable=[];
+	countries_data.map((value)=>{
+		value.languages.map((language)=>{
+			if(countries[language]!=undefined){
+				countries[language]=countries[language]+1;
+			}
+			else{
+				countries[language]=1;
+			}
+		});
+	});
+	for(var l in countries){
+		sortable.push([l,countries[l]]);
+	}
+	sortable.sort(function(a,b){
+		return b[1]-a[1];
+	});
+	tbodyRef.innerHTML="";
+	for (let i = 0; i <10; i++) {
+		tbodyRef.innerHTML+=`
+		<tr>
+		<td>${sortable[i][0]}</td>
+		<td>${sortable[i][1]}</td>
+		</tr>
+		`;
+	}
 }

@@ -4,9 +4,78 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      header{
+        background-color: darkblue;
+        color: white;
+        height: 70px;
+        font-size: 40px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      footer{
+        background-color: darkblue;
+        color: white;
+        height: 50px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      i{
+        color: red;
+      }
+      .main{
+        height: 521px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        padding-top: 80px;
+      }
+      input{
+        outline: none;
+        height: 30px;
+        width: 250px;
+        font-size: 18px;
+        padding-left: 10px;
+      }
+      button{
+        background-color: darkblue;
+        color: white;
+        height: 34px;
+        width: 70px;
+        font-size: 16px;
+      }
+      .search-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
-    Start your code here
+    <header>
+      <p>Dictionary</p>
+    </header>
+    <div class="main">
+      <p>Find any word exist in the world</p>
+      <div class="search-section">
+        <input type="text" placeholder="Enter here">
+      <button>Search</button>
+      </div>
+    </div>
+    <footer>
+      <p>Made with <i class="fa-solid fa-heart"></i> by Bhabani Sankar</p>
+    </footer>
   </body>
 </html>

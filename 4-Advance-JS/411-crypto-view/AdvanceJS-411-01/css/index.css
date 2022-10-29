@@ -1,0 +1,29 @@
+body {
+  background-color: #e5e5e5;
+}
+button {
+  background-color: #ffffff;
+  border-color: #fca311;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 100px;
+}
+button:hover {
+  background-color: #fca311;
+  color: #ffffff;
+}
+.logo {
+  width: 40px;
+}
+.main-img {
+  width: 92%;
+}
+i {
+  color: #fca311;
+  font-size: 30px;
+  margin: 2px 5px 2px 5px;
+}
+footer{
+    background-color: #FFFFFF;
+}
+

@@ -88,7 +88,7 @@
     const getTime=()=>{
             let d=new Date();
             let day=d.getDate();
-            let mo=d.getMonth();
+            let mo=d.getMonth()+1;
             let year=d.getFullYear();
             let h=d.getHours();
             let amPm=h>=12?"PM":"AM";
@@ -142,8 +142,8 @@
       let lnameDyn = document.getElementById("lnameDyn");
       let countryDyn = document.getElementById("countryDyn");
       let pscoreDyn = document.getElementById("pscoreDyn");
-      fnameDyn.value = e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.innerHTML;
-      lnameDyn.value = e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+      fnameDyn.value = e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
+      lnameDyn.value = e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
       countryDyn.value = e.parentElement.previousElementSibling.previousElementSibling.innerHTML;
       pscoreDyn.value = e.parentElement.previousElementSibling.innerHTML;
       if (tbodyref.rows.length == 1) {
@@ -161,11 +161,11 @@
     }
     let add5Dyn=(e)=>{
       let currentPlayerScore=e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
-      e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML=currentPlayerScore+5;
+      e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML=parseInt(currentPlayerScore)+5;
     };
     let minus5Dyn=(e)=>{
       let currentPlayerScore=e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
-      e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML=currentPlayerScore-5;
+      e.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML=parseInt(currentPlayerScore)-5;
     };
   </script>
 </body>
