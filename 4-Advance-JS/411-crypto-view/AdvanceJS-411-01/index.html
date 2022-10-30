@@ -2,42 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/index.css">
-    <title>Document</title>
+    <title>CryptoView Home Page</title>
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/png" />
   </head>
   <body>
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" style="font-size: 27px;" href="index.html">
-          <img class="logo" src="images/logo.png" alt="">  <b>CryptoView</b>
-        </a>
-          <a href="search.html"><button type="submit"><b>Search</b></button></a>
-      </div>
+    
+    <!-- This is for the navigation bar-->
+    <nav>
+      <img src="./assets/images/logo.png" alt="Logo" class="logo-img" />
+      <h1 class="d-inline title ml-1" id="main-title">CryptoView</h1>
+      <button class="f-right nav-button" id="nav-search-button">Search</button>
     </nav>
-    <div class="container-fluid p-5">
-      <div class="row">
-        <div class="col-md-10 mx-auto d-flex align-items-center">
-            <div class="col-md-6 ">
-              <h4>CryptoView</h4>
-              <p> A platform to view information about all cryptocurrencies live.</p>
+
+    <!-- This is for the main section-->
+    <section>
+      <div class="container mt-5">
+        <div class="flex-container">
+          <div class="flex-item">
+            <div class="ml-10">
+              <h1>CryptoView</h1>
+              <p>A platform to view information about all cryptocurrencies live.</p>
             </div>
-            <div class="col-md-6">
-              <img class="main-img" src="images/main_image.svg" alt="">
-            </div>
+          </div>
+          <div class="flex-item">
+            <img src="./assets/images/main_image.svg" alt="Homepage Main Image" class="main-img" />
+          </div>
         </div>
       </div>
-    </div>
-    <footer class="text-center">
-      <p>© CryptoView | Developed by Bhabani Sankar </p>
-      <a href=""><i class="fa-brands fa-square-github"></i></a>
-      <a href=""><i class="fa-brands fa-linkedin"></i></a>
-      <a href=""><i class="fa-solid fa-square-envelope"></i></a>
-      <a href=""><i class="fa-solid fa-mobile-notch"></i></a>
+    </section>
+
+    <!-- This is for the top coins section-->
+    <section class="top-coins">
+      <h1 class="text-center color-yellow mb-1">Top Coins</h1>
+      <div class="flex-container flex-horizontal" id="coins_container">
+      </div>
+    </section>
+
+    <!-- This is for the footer-->
+    <footer>
+      <p class="d-inline">&copy; CryptoView | Developed by Bhabani Sankar Padhy</p>
+      <a href="https://github.com/aayusharyan/cryptoview-project" target="_blank">
+        <img src="./assets/images/github_logo.png" alt="Github Logo" class="footer-image f-right" />
+      </a>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
