@@ -77,9 +77,9 @@ How to use this repository
 | 7     | JS    | [EMOJI-SEARCH](./4-Advance-JS/407-Emoji-search/)              [AdvanceJS-407-01]           | https://bspadhy1999.github.io/WebAssignment/4-Advance-JS/407-Emoji-search/AdvanceJS-407-01/index.html |
 | 8     | JS    | [LEADERBOARD](./4-Advance-JS/408-leaderboard/)    [AdvanceJS-408-01]                       | https://bspadhy1999.github.io/WebAssignment/4-Advance-JS/408-leaderboard/AdvanceJS-408-01/index.html |
 | 9     | JS    | [FROM-VALIDATION](./4-Advance-JS/409-form-validation/)          [AdvanceJS-409-01]         | https://bspadhy1999.github.io/WebAssignment/4-Advance-JS/409-form-validation/AdvanceJS-409-01/index.html |
-| 10    | JS    | [PROJECTS](./4-Advance-JS/410-Projects/)             [AdvanceJS-410-01]                    |             |
-| 10    | JS    | [PROJECTS](./4-Advance-JS/410-Projects/)             [AdvanceJS-410-02]                    |             |
-| 10    | JS    | [PROJECTS](./4-Advance-JS/410-Projects/)             [AdvanceJS-410-03]                    |             |
-| 10    | JS    | [PROJECTS](./4-Advance-JS/410-Projects/)             [AdvanceJS-410-04]                    |             |
-| 10    | JS    | [PROJECTS](./4-Advance-JS/410-Projects/)             [AdvanceJS-410-05]                    |             |
-| 11    | JS    | [CRYPTO-VIEW](./4-Advance-JS/411-crypto-view/)         [AdvanceJS-411-01]                  |             |
+| 10    | JS    | [PROJECTS](./4-Advance-JS/410-Projects/)             [AdvanceJS-410-01]                    | https://bspadhy1999.github.io/WebAssignment/4-Advance-JS/410-Projects/AdvanceJS-410-01/index.html |
+| 10    | JS    | [PROJECTS](./4-Advance-JS/410-Projects/)             [AdvanceJS-410-02]                    | https://bspadhy1999.github.io/WebAssignment/4-Advance-JS/410-Projects/AdvanceJS-410-02/index.html |
+| 10    | JS    | [PROJECTS](./4-Advance-JS/410-Projects/)             [AdvanceJS-410-03]                    | https://bspadhy1999.github.io/WebAssignment/4-Advance-JS/410-Projects/AdvanceJS-410-03/index.html |
+| 10    | JS    | [PROJECTS](./4-Advance-JS/410-Projects/)             [AdvanceJS-410-04]                    | https://bspadhy1999.github.io/WebAssignment/4-Advance-JS/410-Projects/AdvanceJS-410-04/index.html |
+| 10    | JS    | [PROJECTS](./4-Advance-JS/410-Projects/)             [AdvanceJS-410-05]                    | https://bspadhy1999.github.io/WebAssignment/4-Advance-JS/410-Projects/AdvanceJS-410-05/index.html |
+| 11    | JS    | [CRYPTO-VIEW](./4-Advance-JS/411-crypto-view/)         [AdvanceJS-411-01]                  | https://bspadhy1999.github.io/WebAssignment/4-Advance-JS/411-crypto-view/AdvanceJS-411-01/index.html |

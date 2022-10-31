@@ -40,6 +40,10 @@
       padding-top: 100px;
     }
 
+    h1{
+      text-align: center;
+    }
+
     h2 {
       text-align: center;
       font-size: 36px;
@@ -104,6 +108,20 @@
     .audio {
       margin-top: 20px;
     }
+
+    i{
+      color: red;
+    }
+
+    footer{
+      background-color: #553C9A;
+      color: #fff;
+      text-align: center;
+      padding: 7px;
+      position: fixed;
+      bottom: 0px;
+      width: 100vw;
+    }
   </style>
 </head>
 
@@ -115,7 +133,7 @@
   </nav>
 
   <section class="input container">
-    <h2>Find any word exist in the world :)</h2>
+    <h2>Find any word exist in the world</h2>
     <div class="form__wrap">
       <div class="input__wrap">
         <input type="text" placeholder="Type a word" id="input">
@@ -129,10 +147,13 @@
     <div class="audio"></div>
     <div class="not__found"></div>
   </section>
+  <footer>
+    <p>Made with <i class="fa-sharp fa-solid fa-heart"></i> by Bhabani Sankar Padhy</p>
+  </footer>
   <script>
     let input = document.querySelector('#input');
     let searchBtn = document.querySelector('#search');
-    let apiKey = 'https://www.dictionaryapi.com/api/v3/references/sd2/json/test?key=9f6e7130-2aef-4e67-87c4-f79e73cf4971';
+    let apiKey = '9f6e7130-2aef-4e67-87c4-f79e73cf4971';
     let notFound = document.querySelector('.not__found');
     let defBox = document.querySelector('.def');
     let audioBox = document.querySelector('.audio');
