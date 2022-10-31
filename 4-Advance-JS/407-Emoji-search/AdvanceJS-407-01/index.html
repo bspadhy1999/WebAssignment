@@ -1,59 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">  
-<title>Emojee - Emoji 🔍 Application</title>
-    <style>
-      body{
-        background-color: black;
-        color: white;
-        font-family: 'Quicksand', sans-serif;
-        padding-left: 10px;
-        font-size: 25px;
-      }
-      button:hover{
-        background-color: black;
-        color: white;
-        border-color: white;
-      }
-      .para1{
-        font-size: 40px;
-      }
-      button{
-        font-size: 20px;
-        margin-top: 15px;
-      }
-      input{
-        font-size: 20px;
-        margin-top: 15px;
-        margin-right: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <p class="para1">Emojee - Emoji 🔍 Application</p>
-    <hr>
-    <input type="text" placeholder="Emojee Search">
-    <button>Search</button>
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody id="tbody">
-      </tbody>
-    </table>
-    <script src="emojiList.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>Emojee - Emoji 🔍 Application</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Quicksand', sans-serif;
+      padding-left: 10px;
+      font-size: 25px;
+    }
+
+    button:hover {
+      background-color: black;
+      color: white;
+      border-color: white;
+    }
+
+    .para1 {
+      font-size: 40px;
+      font-weight: 900;
+    }
+
+    button {
+      font-size: 20px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      font-size: 20px;
+      margin-top: 15px;
+      margin-right: 10px;
+    }
+
+    table {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="para1">Emojee - Emoji 🔍 Application</p>
+  <hr>
+  <input type="text" placeholder="Emojee Search" onkeyup="emojeeSearch(event)" id="inputText">
+  <button>Search</button>
+  <table rules="rows">
+    <tbody id="tbody">
+    </tbody>
+  </table>
+  <script src="emojiList.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
