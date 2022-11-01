@@ -24,7 +24,7 @@
       </div>
       <div class="col-md-6 mx-auto mt-2">
         <div class="form-group">
-          <input type="text" placeholder="Enter your meal..." id="inputText" class="form-control">
+          <input type="text" placeholder="Enter your meal..." id="inputText" class="form-control" onkeyup="fninputText(event)">
           <button onclick="mealSearch()" class="btn btn-dark mt-3 mb-3">search</button>
         </div>
       </div>
@@ -34,15 +34,15 @@
        <img src="" alt="" >
     </div>
     <script>
-      function mealSearch() {
+      var inputText = document.getElementById("inputText");
       var banner = document.getElementById("banner");
-      banner.innerHTML ="";
-      var inputText = document.getElementById("inputText").value;
-      if(inputText===""){
+      function mealSearch() {
+      if(inputText.value===""){
           alert("Please enter your Meal item ")
           return;
       }
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputText}`)
+      banner.innerHTML ="";
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputText.value}`)
       .then(
         function (res) {
           return res.json();
@@ -65,7 +65,12 @@
           console.log("Error in iterate Data");
         }
       );
-  }
+    }
+    function fninputText(e){
+      if(inputText.value===""){
+        banner.innerHTML="";
+      }
+    }
     </script>
   </body>
 </html>
